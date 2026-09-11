@@ -4,6 +4,8 @@ import Footer from "./components/Footer";
 import Stacks from "./components/Stacks";
 import { Suspense } from "react";
 import type { IStack } from "./types/stacksType";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const stacksfetch = async (): Promise<IStack[]> => {
   const res = await fetch("/technologies.json");
@@ -24,7 +26,7 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <main className="max-w-[1600px] mx-auto px-4 sm:px-6 pt-24">
+      <main className="max-w-[1440px] mx-auto px-4 sm:px-6 pt-24">
         <HeroSection />
 
         <Suspense fallback={<Loader />}>
@@ -33,6 +35,20 @@ function App() {
       </main>
 
       <Footer />
+
+      <ToastContainer
+        position="bottom-right"
+        autoClose={2500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+
     </div>
   );
 }

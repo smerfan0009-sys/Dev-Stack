@@ -1,6 +1,6 @@
 const HeroSection = () => {
     return (
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 font-['Plus_Jakarta_Sans']">
+        <section className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-22 font-['Plus_Jakarta_Sans']">
             <div className="w-full md:w-1/2 space-y-6 text-center md:text-left">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[rgb(15,23,42)] leading-tight">
                     Build Your Ideal <br />
