@@ -1,5 +1,3 @@
-import React from 'react';
-
 const UnselectedStacks = () => {
     return (
         <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm">

@@ -1,4 +1,3 @@
-import React from 'react';
 import type { IStack } from '../types/stacksType';
 
 interface SelectedStacksProps {

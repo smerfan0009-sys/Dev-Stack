@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Footer = () => {
     return (
         <footer className="w-full bg-white font-['Plus_Jakarta_Sans'] text-slate-600 pt-12 md:pt-16 pb-8 border-t border-slate-100">
