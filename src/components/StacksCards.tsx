@@ -10,20 +10,29 @@ interface StacksCardsProps {
 const getBadgeStyle = (badge?: string) => {
     switch (badge?.toLowerCase()) {
         case 'popular':
-        case 'essential':
-        case 'top sql':
-            return 'bg-sky-50 text-sky-500';
-        case 'versatile':
-        case 'standard':
-            return 'bg-emerald-50 text-emerald-500';
+            return 'bg-sky-50 text-sky-600 border border-sky-100';
+        case 'powerful':
+            return 'bg-purple-50 text-purple-600 border border-purple-100';
         case 'fast':
-        case 'ubiquitous':
-            return 'bg-amber-50 text-amber-600';
-        case 'ssr / edge':
-        case 'cache':
-            return 'bg-pink-50 text-pink-500';
+            return 'bg-emerald-50 text-emerald-600 border border-emerald-100';
+        case 'essential':
+            return 'bg-rose-50 text-rose-600 border border-rose-100';
+        case 'nosql':
+            return 'bg-teal-50 text-teal-600 border border-teal-100';
+        case 'top sql':
+            return 'bg-blue-50 text-blue-600 border border-blue-100';
+        case 'reliable':
+            return 'bg-indigo-50 text-indigo-600 border border-indigo-100';
+        case 'modern':
+            return 'bg-cyan-50 text-cyan-600 border border-cyan-100';
+        case 'classic':
+            return 'bg-violet-50 text-violet-600 border border-violet-100';
+        case 'containers':
+            return 'bg-blue-50 text-blue-700 border border-blue-200';
+        case 'lightning fast':
+            return 'bg-amber-50 text-amber-600 border border-amber-100';
         default:
-            return 'bg-slate-100 text-slate-600';
+            return 'bg-slate-100 text-slate-600 border border-slate-200';
     }
 };
 
@@ -33,20 +42,20 @@ const StacksCards = ({ stacksPromise, onAddToStack, selectedStacks }: StacksCard
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {stacks.map((stack: IStack) => {
-                // চেক করা হচ্ছে কার্ডটি অলরেডি সিলেক্টেড কি না
+
                 const isSelected = selectedStacks.some((item) => item.id === stack.id);
 
                 return (
-                    <div 
-                        key={stack.id} 
+                    <div
+                        key={stack.id}
                         className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
                     >
                         <div>
                             <div className="flex items-center justify-between">
-                                <img 
-                                    src={stack.icon} 
-                                    alt={stack.name} 
-                                    className="w-9 h-9 object-contain" 
+                                <img
+                                    src={stack.icon}
+                                    alt={stack.name}
+                                    className="w-9 h-9 object-contain"
                                 />
                                 {stack.badge && (
                                     <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getBadgeStyle(stack.badge)}`}>
@@ -58,7 +67,7 @@ const StacksCards = ({ stacksPromise, onAddToStack, selectedStacks }: StacksCard
                             <h3 className="text-xl font-bold text-slate-900 mt-5 mb-2">
                                 {stack.name}
                             </h3>
-                            <p className="text-slate-400 text-sm leading-relaxed mb-6 line-clamp-2 min-h-[40px]">
+                            <p className="text-slate-400 text-sm leading-relaxed mb-6">
                                 {stack.description}
                             </p>
                         </div>
@@ -66,10 +75,10 @@ const StacksCards = ({ stacksPromise, onAddToStack, selectedStacks }: StacksCard
                         <div>
                             <div className="flex items-center justify-between text-xs text-slate-500 mb-5">
                                 <div className="flex items-center gap-2">
-                                    <span className="bg-slate-100/80 px-2.5 py-1 rounded-md font-medium text-slate-600">
+                                    <span className="bg-slate-100/80 px-2.5 py-1 rounded-md font-medium text-slate-500">
                                         {stack.category}
                                     </span>
-                                    <span className="bg-slate-100/80 px-2.5 py-1 rounded-md font-medium text-slate-600">
+                                    <span className=" px-8 py-1 rounded-md font-medium text-slate-500">
                                         {stack.difficulty}
                                     </span>
                                 </div>
@@ -79,8 +88,7 @@ const StacksCards = ({ stacksPromise, onAddToStack, selectedStacks }: StacksCard
                                 </div>
                             </div>
 
-                            {/* isSelected সত্য হলে বাটন disabled এবং unclickable হবে */}
-                            <button 
+                            <button
                                 onClick={() => onAddToStack(stack)}
                                 disabled={isSelected}
                                 className="w-full bg-[#0a0f1d] hover:bg-slate-800 text-white font-semibold py-3 px-4 rounded-xl text-sm transition-colors cursor-pointer disabled:bg-slate-300 disabled:cursor-not-allowed disabled:hover:bg-slate-300"

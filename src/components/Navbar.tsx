@@ -4,7 +4,6 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        /* sticky পরিপূরক হিসেবে fixed top-0 left-0 w-full ব্যবহার করা হয়েছে */
         <nav className="fixed top-0 left-0 w-full bg-white z-50 p-4 border-b border-slate-100 shadow-sm">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
 

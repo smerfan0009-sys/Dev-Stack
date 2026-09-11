@@ -10,15 +10,12 @@ interface SelectedStacksProps {
 const SelectedStacks = ({ stacks, onRemove, onRemoveAll }: SelectedStacksProps) => {
     return (
         <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm">
-            {/* হেডার */}
             <div className="mb-6">
                 <h3 className="text-lg font-bold text-slate-900">Your Stack</h3>
                 <p className="text-xs text-slate-400 mt-1">
                     {stacks.length} {stacks.length === 1 ? 'Technology' : 'Technologies'} Selected
                 </p>
             </div>
-
-            {/* সিলেক্ট করা টেকনোলজির তালিকা */}
             <div className="space-y-4 max-h-[400px] overflow-y-auto pr-1">
                 {stacks.map((stack) => (
                     <div key={stack.id} className="flex items-center justify-between">
@@ -38,7 +35,6 @@ const SelectedStacks = ({ stacks, onRemove, onRemoveAll }: SelectedStacksProps) 
                             </div>
                         </div>
 
-                        {/* রিমুভ বাটন (✕) */}
                         <button
                             onClick={() => onRemove(stack.id)}
                             className="text-slate-300 hover:text-red-500 p-1 transition-colors cursor-pointer text-base font-bold"
@@ -49,8 +45,6 @@ const SelectedStacks = ({ stacks, onRemove, onRemoveAll }: SelectedStacksProps) 
                     </div>
                 ))}
             </div>
-
-            {/* Remove All বাটন */}
             <div className="mt-6 pt-4 border-t border-slate-50">
                 <button
                     onClick={onRemoveAll}
