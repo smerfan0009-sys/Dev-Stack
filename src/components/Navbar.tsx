@@ -1,12 +1,12 @@
 import { useState } from 'react';
 
 const Navbar = () => {
-
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="p-4 sticky top-0 bg-white z-50">
-            <div className="flex items-center justify-between">
+        /* sticky পরিপূরক হিসেবে fixed top-0 left-0 w-full ব্যবহার করা হয়েছে */
+        <nav className="fixed top-0 left-0 w-full bg-white z-50 p-4 border-b border-slate-100 shadow-sm">
+            <div className="max-w-7xl mx-auto flex items-center justify-between">
 
                 <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-[rgb(71,85,105)] cursor-pointer">
                     <img src="./src/ui/hamburger.png" alt="Hamburger Menu" className="w-6 h-6" />
