@@ -6,7 +6,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 md:pb-12">
 
                     <div className="md:col-span-5 flex flex-col items-center md:items-start text-center md:text-left space-y-5">
-                        <img src="./src/assets/dev-stack-logo.png" alt="Dev Stack Logo" className="h-8 object-contain"
+                        <img src="/assets/dev-stack-logo.png" alt="Dev Stack Logo" className="h-8 object-contain"
                         />
                         <p className="text-[rgb(100,116,139)] text-sm max-w-sm leading-relaxed">
                             Curated tools, technologies, and resources for developers building modern software.

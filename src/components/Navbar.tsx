@@ -8,11 +8,11 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto flex items-center justify-between">
 
                 <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-[rgb(71,85,105)] cursor-pointer">
-                    <img src="./src/ui/hamburger.png" alt="Hamburger Menu" className="w-6 h-6" />
+                   <img src="/assets/hamburger.png" alt="Hamburger Menu" className="w-6 h-6" />
                 </button>
 
                 <div className="flex items-center cursor-pointer">
-                    <img src="./src/assets/dev-stack-logo.png" alt="Dev Stack Logo" />
+                    <img src="/assets/dev-stack-logo.png" alt="Dev Stack Logo" />
                 </div>
 
                 <ul className="hidden md:flex space-x-6 font-['Plus_Jakarta_Sans'] font-medium text-[16px]">
