@@ -8,11 +8,11 @@ This project was created as part of **Assignment-5**. I built it with React and 
 
 ## 🌐 Live Demo
 
-🔗 **Live Site:** `YOUR_LIVE_SITE_LINK`
+🔗 **Live Site:** https://erfan-dev-stack.netlify.app/
 
 ## 📂 GitHub Repository
 
-🔗 **Repository:** `YOUR_GITHUB_REPOSITORY_LINK`
+🔗 **Repository:** https://github.com/smerfan0009-sys/Dev-Stack
 
 ---
 
