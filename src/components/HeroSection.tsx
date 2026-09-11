@@ -27,9 +27,9 @@ const HeroSection = () => {
             </div>
 
             <div className="w-full md:w-1/2 flex justify-center">
-                <img 
-                    src="./src/assets/banner-stack.png" 
-                    alt="Development Stack Banner" 
+                <img
+                    src="./src/assets/banner-stack.png"
+                    alt="Development Stack Banner"
                     className="w-full max-w-sm lg:max-w-md h-auto object-contain"
                 />
             </div>
