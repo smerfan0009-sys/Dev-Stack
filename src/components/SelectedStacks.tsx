@@ -23,9 +23,9 @@ const SelectedStacks = ({ stacks, onRemove, onRemoveAll }: SelectedStacksProps) 
                 {stacks.map((stack) => (
                     <div key={stack.id} className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
-                            <img 
-                                src={stack.icon} 
-                                alt={stack.name} 
+                            <img
+                                src={stack.icon}
+                                alt={stack.name}
                                 className="w-7 h-7 object-contain"
                             />
                             <div>
@@ -39,7 +39,7 @@ const SelectedStacks = ({ stacks, onRemove, onRemoveAll }: SelectedStacksProps) 
                         </div>
 
                         {/* রিমুভ বাটন (✕) */}
-                        <button 
+                        <button
                             onClick={() => onRemove(stack.id)}
                             className="text-slate-300 hover:text-red-500 p-1 transition-colors cursor-pointer text-base font-bold"
                             title="Remove"
@@ -52,7 +52,7 @@ const SelectedStacks = ({ stacks, onRemove, onRemoveAll }: SelectedStacksProps) 
 
             {/* Remove All বাটন */}
             <div className="mt-6 pt-4 border-t border-slate-50">
-                <button 
+                <button
                     onClick={onRemoveAll}
                     className="w-full border border-red-200 text-red-500 hover:bg-red-50 font-medium py-2.5 rounded-xl text-sm transition-colors cursor-pointer"
                 >
